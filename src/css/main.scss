@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+$desktop: 1000px;
+
+$font-family-lg: 'Big Shoulders Display', cursive;
+$font-family-sm: 'Lexend Deca', sans-serif;
+
+// colors
+$orange: hsl(31, 77%, 52%);
+$cyan: hsl(184, 100%, 22%);
+$dark-cyan: hsl(179, 100%, 13%);
+$white: hsla(0, 0%, 100%, 0.75);
+$white-btn: hsla(0, 0%, 100%, 1);
+$gray: hsl(0, 0%, 95%, 1);
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+/* set up the body */
+body {
+  font-family: $font-family-sm;
+  font-size: 15px;
+  color: $white;
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.563rem;
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  padding: 0.5rem;
+
+  @media (min-width: $desktop) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* make images easier to work with */
+img,
+picutre {
+  max-width: 100%;
+  display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.card {
+  border-radius: 0.5rem;
+  padding: 3.1rem;
+
+  * {
+    margin-bottom: 2rem;
+  }
+}
+
+.card-title {
+  font-family: $font-family-lg;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3rem;
+  color: $gray;
+}
+
+.card-text {
+  width: 90%;
+}
+
+.btn {
+  text-transform: capitalize;
+  border: 2px solid transparent;
+  border-radius: 1.563rem;
+  padding: 0.75rem 2rem;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  &:hover,
+  &:active {
+    background-color: transparent;
+    color: $white-btn;
+    border: 2px solid $white-btn;
+  }
+}
+
+.orange {
+  background-color: $orange;
+  button {
+    color: $orange;
+  }
+}
+.cyan {
+  background-color: $cyan;
+  transform: translateY(-1rem);
+  button {
+    color: $cyan;
+  }
+  @media (min-width: $desktop) {
+    transform: translateX(-1rem);
+  }
+}
+.dark-cyan {
+  background-color: $dark-cyan;
+  transform: translateY(-2rem);
+  button {
+    color: $dark-cyan;
+  }
+  @media (min-width: $desktop) {
+    transform: translateX(-2rem);
+  }
+}
